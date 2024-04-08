@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="258.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="brandimgV" fitHeight="198.0" fitWidth="186.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@c21cdd2b452985be6147fa9d8142252b.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="5.0" layoutY="200.0" mnemonicParsing="false" prefHeight="189.0" prefWidth="238.0" style="-fx-background-color: white;" text=" UniCafe&#10;&#10;~Streamline &#10;your hectic life" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold Italic" size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="349.0" style="-fx-background-color: #fffaeb;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="lockimgV" fitHeight="62.0" fitWidth="57.0" layoutX="138.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@istockphoto-936681148-612x612.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="23.0" layoutY="150.0" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #fffaeb;" text="   Username">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow height="1.0" radius="0.125" width="1.5" />
+               </effect>
+            </Label>
+            <Label layoutX="23.0" layoutY="210.0" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #fffaeb;" text="   Password">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow height="1.0" radius="0.125" width="1.5" />
+               </effect>
+            </Label>
+            <TextField fx:id="usernameText" layoutX="149.0" layoutY="152.0" prefHeight="26.0" prefWidth="178.0" promptText="username" />
+            <TextField fx:id="passwordText" layoutX="150.0" layoutY="213.0" prefHeight="26.0" prefWidth="178.0" promptText="password" />
+            <Button fx:id="LoginButton" layoutX="66.0" layoutY="303.0" mnemonicParsing="false" onAction="#loginClick" prefHeight="26.0" prefWidth="223.0" style="-fx-background-color: #5cc3fa;" text="LOGIN">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="CancelButton" layoutX="65.0" layoutY="351.0" mnemonicParsing="false" onAction="#cancelClick" prefHeight="28.0" prefWidth="226.0" style="-fx-background-color: #5cc3fa;" text="CANCEL">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Label fx:id="loginMsg" layoutX="28.0" layoutY="274.0" prefHeight="18.0" prefWidth="299.0" style="-fx-alignment: center; -fx-background-color: #fffaeb;" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
