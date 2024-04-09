@@ -6,8 +6,7 @@ import java.sql.DriverManager;
 public class DatabaseConnection {
     public Connection databaseLink;
     public Connection getConnection(){
-        String databaseName = "demo";
-        //String databaseName = "demodb";
+        String databaseName = "project";
         String databasePw= "abcd12";
         String databaseUser= "root";
         String url="jdbc:mysql://localhost/" + databaseName;
@@ -15,7 +14,7 @@ public class DatabaseConnection {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             databaseLink = DriverManager.getConnection(url, databaseUser, databasePw);
-            //System.out.println("connected");
+            System.out.println("connected");
         } catch(Exception e){
             e.printStackTrace();
             e.getCause();
