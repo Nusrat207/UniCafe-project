@@ -2,9 +2,8 @@ package com.example.project;
 
 public class GlobalData {
     private static GlobalData instance;
-    private String name;
+    private String name, mail;
     private int id;
-    private String mail;
     private String phone;
 
     private GlobalData() {}

@@ -26,7 +26,6 @@ public class firstpageController implements Initializable {
     private Label Menu, MenuBack;
     @FXML
     private AnchorPane slider, rootPane;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

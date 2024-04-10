@@ -93,7 +93,7 @@ public class LoginController {
                     GlobalData.getInstance().setPhone(phone);
 
                 } else {
-                    loginMsg.setText("Wrong credentials");
+                     loginMsg.setText("Wrong credentials");
                 }
             }
 

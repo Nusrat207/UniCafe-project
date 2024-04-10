@@ -83,7 +83,6 @@ public class ProfileEdit {
                         p.execute();
 
                         System.out.println("updated");
-
                         try {
                             Parent signup = FXMLLoader.load(getClass().getResource("myprofile.fxml"));
                             rootPane.getChildren().setAll(signup);
