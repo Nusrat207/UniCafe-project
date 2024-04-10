@@ -55,16 +55,16 @@ public class LoginController {
         }
     }
 
-   @FXML
-   public void loginClick(ActionEvent e){
-       if(!idText.getText().isBlank() && !passwordText.getText().isBlank()){
-           validateLogin();
-       } else{
-           loginMsg.setText("pls enter credentials");
-       }
-   }
+    @FXML
+    public void loginClick(ActionEvent e){
+        if(!idText.getText().isBlank() && !passwordText.getText().isBlank()){
+            validateLogin();
+        } else{
+            loginMsg.setText("pls enter credentials");
+        }
+    }
     public void validateLogin(){
-       DatabaseConnection connectNow = new DatabaseConnection();
+        DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
         String verifyLogin = "select * from user_info where std_id = '" + idText.getText() + "'";
         try{
@@ -76,7 +76,22 @@ public class LoginController {
                 String enteredPassword = hashPassword(passwordText.getText());
 
                 if (hashedPassword.equals(enteredPassword)) {
-                    loginMsg.setText("Congrats, login successful!");
+                    //loginMsg.setText("Congrats, login successful!");
+                    try {
+                        Parent login = FXMLLoader.load(getClass().getResource("firstpage.fxml"));
+                        rootPane.getChildren().setAll(login);
+                    } catch (IOException ev) {
+                        ev.printStackTrace();
+                    }
+                    String name = queryRes.getString("name");
+                    String mail = queryRes.getString("mail");
+                    String phone = queryRes.getString("phone");
+
+                    GlobalData.getInstance().setName(name);
+                    GlobalData.getInstance().setId(Integer.parseInt(idText.getText()));
+                    GlobalData.getInstance().setMail(mail);
+                    GlobalData.getInstance().setPhone(phone);
+
                 } else {
                     loginMsg.setText("Wrong credentials");
                 }
@@ -109,6 +124,7 @@ public class LoginController {
             ev.printStackTrace();
         }
     }
+
 
     /*
     @FXML

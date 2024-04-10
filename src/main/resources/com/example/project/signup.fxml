@@ -121,7 +121,7 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </TextField>
-      <Label fx:id="signupMsg" layoutX="114.0" layoutY="548.0" prefHeight="18.0" prefWidth="179.0" style="-fx-alignment: center;">
+      <Label fx:id="signupMsg" layoutX="52.0" layoutY="547.0" prefHeight="27.0" prefWidth="319.0" style="-fx-alignment: center;">
          <font>
             <Font size="14.0" />
          </font>
