@@ -4,93 +4,39 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="422.0" style="-fx-background-color: linear-gradient(to bottom right, #9a40c9, #bc91e6 , #ed72db );" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.SignupController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="775.0" style="-fx-background-color: #dcfaf6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.SignupController">
    <children>
-      <Label layoutX="104.0" layoutY="60.0" prefHeight="70.0" prefWidth="216.0" style="-fx-alignment: center;" text="SIGN UP" textAlignment="CENTER" textFill="#610176">
+      <Label layoutX="280.0" layoutY="61.0" prefHeight="70.0" prefWidth="216.0" style="-fx-alignment: center;" text="SIGN UP" textAlignment="CENTER">
          <font>
-            <Font name="Arial Bold Italic" size="46.0" />
+            <Font name="Arial Bold Italic" size="44.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.0117647061124444" blue="0.08627451211214066" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="139.0" layoutY="137.0" text="Create Your Account">
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.34736841917037964" green="0.3254970908164978" blue="0.3254970908164978" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.3803921639919281" green="0.003921568859368563" blue="0.4627451002597809" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-         <font>
-            <Font name="Arial" size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="name" layoutX="53.0" layoutY="234.0" prefHeight="41.0" prefWidth="319.0" promptText="Name" style="-fx-background-radius: 15;">
-         <font>
-            <Font name="Arial Bold" size="24.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="std_id" layoutX="53.0" layoutY="298.0" prefHeight="41.0" prefWidth="319.0" promptText="Student ID" style="-fx-background-radius: 15;">
-         <font>
-            <Font name="Arial Bold" size="24.0" />
-         </font>
-      </TextField>
-      <Button fx:id="signup" layoutX="156.0" layoutY="585.0" mnemonicParsing="false" onAction="#signupClick" style="-fx-alignment: center; -fx-background-color: #E6E6FA; -fx-background-radius: 25;" text="Sign Up">
-         <font>
-            <Font name="Arial Bold" size="22.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.49803921580314636" green="0.364705890417099" blue="0.6627451181411743" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.3803921639919281" green="0.003921568859368563" blue="0.4627451002597809" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Button>
-      <Button fx:id="login" layoutX="251.0" layoutY="632.0" mnemonicParsing="false" onAction="#loginClicked" prefHeight="34.0" prefWidth="66.0" style="-fx-alignment: center; -fx-background-color: transparent;; -fx-background-radius: 25;" text="Login" textAlignment="CENTER">
-         <font>
-            <Font name="Arial Bold" size="16.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.49803921580314636" green="0.364705890417099" blue="0.6627451181411743" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.4588235318660736" green="0.019607843831181526" blue="0.5686274766921997" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Button>
-      <Label layoutX="113.0" layoutY="632.0" prefHeight="34.0" prefWidth="146.0" text="   Already an user?" textAlignment="RIGHT">
+      <Label layoutX="315.0" layoutY="138.0" text="Create Your Account">
          <font>
             <Font name="Arial" size="16.0" />
          </font>
@@ -99,37 +45,108 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.49803921580314636" green="0.364705890417099" blue="0.6627451181411743" />
+                        <Color red="0.20265106856822968" green="0.4795178771018982" blue="0.4842105209827423" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.4588235318660736" green="0.019607843831181526" blue="0.5686274766921997" />
+                        <Color red="0.019607843831181526" green="0.0117647061124444" blue="0.08627451211214066" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </textFill>
       </Label>
-      <TextField fx:id="mail" layoutX="51.0" layoutY="360.0" prefHeight="34.0" prefWidth="319.0" promptText="mail" style="-fx-background-radius: 15;">
+      <TextField fx:id="name" layoutX="186.0" layoutY="214.0" prefHeight="43.0" prefWidth="404.0" promptText="Name" style="-fx-background-radius: 15;">
          <font>
-            <Font name="Arial Bold" size="24.0" />
+            <Font name="Arial Bold" size="23.0" />
          </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="15.0" radius="7.0" width="15.0">
+               <color>
+                  <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+               </color>
+            </InnerShadow>
+         </effect>
       </TextField>
-      <TextField fx:id="phone" layoutX="51.0" layoutY="420.0" prefHeight="34.0" prefWidth="319.0" promptText="phone" style="-fx-background-radius: 15;">
+      <TextField fx:id="std_id" layoutX="184.0" layoutY="277.0" prefHeight="43.0" prefWidth="404.0" promptText="Student ID" style="-fx-background-radius: 15;">
          <font>
-            <Font name="Arial Bold" size="24.0" />
+            <Font name="Arial Bold" size="23.0" />
          </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="15.0" radius="7.0" width="15.0">
+               <color>
+                  <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+               </color>
+            </InnerShadow>
+         </effect>
       </TextField>
-      <Label fx:id="signupMsg" layoutX="52.0" layoutY="547.0" prefHeight="27.0" prefWidth="319.0" style="-fx-alignment: center;">
+      <Button fx:id="signup" layoutX="322.0" layoutY="563.0" mnemonicParsing="false" onAction="#signupClick" style="-fx-alignment: center; -fx-background-color: linear-gradient(to bottom right, #2D4A4D, #4A7D82,#2D4A4D); -fx-background-radius: 20;" text="Sign Up" textFill="#f3f8f8">
          <font>
-            <Font size="14.0" />
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="login" layoutX="417.0" layoutY="633.0" mnemonicParsing="false" onAction="#loginClicked" prefHeight="34.0" prefWidth="66.0" style="-fx-alignment: center; -fx-background-color: transparent;; -fx-background-radius: 25;" text="Login" textAlignment="CENTER" textFill="#5d6589">
+         <font>
+            <Font name="Arial Bold Italic" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="280.0" layoutY="633.0" prefHeight="34.0" prefWidth="146.0" text="   Already an user?" textAlignment="RIGHT" textFill="#5d6589">
+         <font>
+            <Font name="Arial" size="16.0" />
          </font>
       </Label>
-      <PasswordField fx:id="password" layoutX="51.0" layoutY="489.0" prefHeight="43.0" prefWidth="319.0" promptText="password (minimum 6 digits)" style="-fx-background-radius: 15;">
+      <TextField fx:id="mail" layoutX="184.0" layoutY="342.0" prefHeight="43.0" prefWidth="404.0" promptText="mail" style="-fx-background-radius: 15;">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="15.0" radius="7.0" width="15.0">
+               <color>
+                  <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="phone" layoutX="184.0" layoutY="407.0" prefHeight="43.0" prefWidth="404.0" promptText="phone" style="-fx-background-radius: 15;">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="15.0" radius="7.0" width="15.0">
+               <color>
+                  <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <Label fx:id="signupMsg" layoutX="243.0" layoutY="522.0" prefHeight="27.0" prefWidth="290.0" style="-fx-alignment: center;">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="187.0" layoutY="478.0" prefHeight="43.0" prefWidth="404.0" promptText="password (minimum 6 digits)" style="-fx-background-radius: 15;">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="15.0" radius="7.0" width="15.0">
+               <color>
+                  <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+               </color>
+            </InnerShadow>
+         </effect>
       </PasswordField>
+      <ImageView fitHeight="46.0" fitWidth="55.0" layoutX="14.0" layoutY="637.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/stamp1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/backk.png" />
+         </image>
+      </ImageView>
+      <Button layoutY="1.0" mnemonicParsing="false" onAction="#backClick" prefHeight="20.0" prefWidth="27.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

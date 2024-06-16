@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="775.0" style="-fx-background-color: #dcfaf6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.AddFood">
+    <children>
+        <Label layoutX="281.0" layoutY="34.0" text="Add Food Item">
+            <font>
+                <Font name="Arial Bold Italic" size="35.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.019607843831181526" green="0.0117647061124444" blue="0.08627451211214066" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <TextField fx:id="name" layoutX="377.0" layoutY="148.0" prefHeight="39.0" prefWidth="344.0" promptText="name" style="-fx-background-radius: 20;">
+            <font>
+                <Font name="Arial Bold" size="17.0" />
+            </font>
+            <effect>
+                <InnerShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0">
+                    <color>
+                        <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+                    </color>
+                </InnerShadow>
+            </effect>
+        </TextField>
+        <Button fx:id="add" layoutX="346.0" layoutY="636.0" mnemonicParsing="false" onAction="#addClick" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #3b8287; -fx-background-radius: 20; -fx-alignment: center;" text="Add " textFill="#f3f8f8">
+            <font>
+                <Font name="Arial Bold" size="25.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="14.0" layoutY="652.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/stamp1.png" />
+            </image>
+        </ImageView>
+      <Label layoutX="377.0" layoutY="112.0" text="Item Name">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="210.0" text="Price">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="310.0" text="Meal">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="410.0" text="Image">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="452.0" fitWidth="312.0" layoutX="14.0" layoutY="132.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/addFinal.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="price" layoutX="377.0" layoutY="247.0" prefHeight="39.0" prefWidth="344.0" promptText="price  TK" style="-fx-background-radius: 20;">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0">
+               <color>
+                  <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <ChoiceBox fx:id="CB" layoutX="377.0" layoutY="345.0" prefHeight="39.0" prefWidth="344.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-font-size: 14; -fx-font-family: Arial; -fx-font-weight: bold;">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0">
+               <color>
+                  <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </ChoiceBox>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="176.0" layoutX="388.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="uploadButton" layoutX="474.0" layoutY="409.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10;" text="upload image">
+         <font>
+            <Font name="Arial Italic" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/backk.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#backClick" prefHeight="24.0" prefWidth="26.0" style="-fx-background-color: transparent;" />
+    </children>
+</AnchorPane>

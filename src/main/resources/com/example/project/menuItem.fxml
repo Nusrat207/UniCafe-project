@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="270.0" prefWidth="241.0" style="-fx-background-color: #d7d9d9; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.MenuItem">
+   <children>
+      <ImageView fx:id="imgView" fitHeight="154.0" fitWidth="188.0" layoutX="30.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/chowmein.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="name" layoutX="10.0" layoutY="191.0" prefHeight="31.0" prefWidth="226.0" style="-fx-alignment: center;" text="Chicken Khichuri" textFill="#1a5346">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="price" layoutX="51.0" layoutY="233.0" prefHeight="22.0" prefWidth="145.0" style="-fx-alignment: center;" text="120 TK" textFill="#1a5346">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="meal" layoutX="110.0" layoutY="166.0" text="lunch">
+         <font>
+            <Font name="Arial Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,12 +1,16 @@
 package com.example.project;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -25,6 +29,15 @@ public class ProfileEdit {
     private Label msg;
     @FXML
     private AnchorPane rootPane;
+
+    @FXML
+    public void backClick(ActionEvent e) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(firstpageController.class.getResource("myprofile_new.fxml"));
+        Stage stage=(Stage)((Node)e.getSource()).getScene().getWindow();
+        Scene scene = new Scene(fxmlLoader.load(), 775, 706);
+        stage.setScene(scene);
+        stage.show();
+    }
     @FXML
     public void saveClick(){
         if(currentPw.getText().isBlank()){
@@ -84,7 +97,7 @@ public class ProfileEdit {
 
                         System.out.println("updated");
                         try {
-                            Parent signup = FXMLLoader.load(getClass().getResource("myprofile.fxml"));
+                            Parent signup = FXMLLoader.load(getClass().getResource("myprofile_new.fxml"));
                             rootPane.getChildren().setAll(signup);
                         } catch (IOException ev) {
                             ev.printStackTrace();
@@ -96,8 +109,6 @@ public class ProfileEdit {
                 e.printStackTrace();
                 e.getCause();
             }
-
         }
-
     }
 }

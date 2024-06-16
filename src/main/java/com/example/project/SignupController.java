@@ -79,12 +79,26 @@ public class SignupController {
 
                 if (rowsInserted > 0) {
                     System.out.println("Data inserted successfully!");
+                    try {
+                        Parent login = FXMLLoader.load(getClass().getResource("login_page.fxml"));
+                        rootPane.getChildren().setAll(login);
+                    } catch (IOException ev) {
+                        ev.printStackTrace();
+                    }
                 }
             } catch(Exception e){
                 e.printStackTrace();
                 e.getCause();
             }
         }
+    }
+    @FXML
+    void backClick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("front.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 775, 706);
+        Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
     public static String hashPassword(String password) {
         try {

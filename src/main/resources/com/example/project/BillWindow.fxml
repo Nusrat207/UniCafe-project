@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.BillWindowController">
+
+
+        <VBox alignment="CENTER" layoutY="38.0" prefHeight="460.0" prefWidth="400.0" spacing="10" style="-fx-background-color: white;">
+            <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="UniCafe" />
+            <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Order Details:" />
+            <Label fx:id="billContentLabel" style="-fx-font-size: 14;" />
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Thank you for your purchase!" />
+        </VBox>
+         <HBox alignment="TOP_RIGHT" layoutX="1.0" layoutY="3.0" prefHeight="30.0" prefWidth="394.0">
+             <Button fx:id="closeButton" onAction="#handleCloseButtonAction" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 50%; -fx-min-width: 30px; -fx-min-height: 30px; -fx-max-width: 30px; -fx-max-height: 30px;" text="X" />
+         </HBox>
+  
+</AnchorPane>

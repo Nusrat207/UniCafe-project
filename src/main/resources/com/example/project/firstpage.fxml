@@ -2,63 +2,121 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="429.0" style="-fx-background-color: linear-gradient(to bottom right, #9a40c9, #bc91e6 , #ed72db );" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.firstpageController">
+<!--
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="775.0" style="-fx-background-color: #dcfaf6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.firstpageController">
    <children>
-      <Button layoutX="113.0" layoutY="247.0" mnemonicParsing="false" onAction="#onEastShopClicked" prefHeight="48.0" prefWidth="180.0" style="-fx-background-radius: 20; -fx-background-color: #E6E6FA;" text="East Shop" textAlignment="CENTER" textFill="#7c0d6f">
+      <Button layoutX="113.0" layoutY="127.0" mnemonicParsing="false" onAction="#onEastShopClicked" prefHeight="177.0" prefWidth="526.0" style="-fx-background-radius: 15; -fx-background-color: #45787d;" text="East Shop" textAlignment="CENTER" textFill="#f3f8f8">
          <font>
-            <Font name="Arial Bold" size="18.0" />
+            <Font name="Arial Bold" size="40.0" />
          </font>
       </Button>
-      <Button layoutX="113.0" layoutY="363.0" mnemonicParsing="false" onAction="#onWestShopClicked" prefHeight="48.0" prefWidth="180.0" style="-fx-background-radius: 20; -fx-background-color: #E6E6FA;" text="West Shop" textAlignment="CENTER" textFill="#7c0d6f">
+      <Button layoutX="113.0" layoutY="353.0" mnemonicParsing="false" onAction="#onWestShopClicked" prefHeight="178.0" prefWidth="526.0" style="-fx-background-radius: 15; -fx-background-color: #45787d;" text="West Shop" textAlignment="CENTER" textFill="#f3f8f8">
          <font>
-            <Font name="Arial Bold" size="18.0" />
+            <Font name="Arial Bold" size="40.0" />
          </font>
       </Button>
-      <AnchorPane fx:id="slider" layoutX="-3.0" layoutY="130.0" opacity="0.92" prefHeight="383.0" prefWidth="171.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+      <AnchorPane fx:id="slider" layoutX="-1.0" layoutY="59.0" opacity="0.9" prefHeight="534.0" prefWidth="215.0" style="-fx-background-color: #697070; -fx-background-radius: 10;">
          <children>
-            <Button fx:id="myProfile" layoutX="12.0" layoutY="51.0" mnemonicParsing="false" onAction="#myProfileClick" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #E6E6FA;" text="My Profile">
+            <Button fx:id="myProfile" layoutX="40.0" layoutY="25.0" mnemonicParsing="false" onAction="#myProfileClick" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8;" text="My Profile">
                <font>
                   <Font name="Arial Bold" size="16.0" />
                </font>
             </Button>
-            <Button layoutX="12.0" layoutY="109.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #E6E6FA; -fx-alignment: center;" text="Previous Orders">
+            <Button layoutX="40.0" layoutY="109.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8; -fx-alignment: center;" text="Previous Orders">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Button>
-            <Button layoutX="32.0" layoutY="249.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-radius: 12;" text="etc">
+            <Button layoutX="44.0" layoutY="438.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-radius: 12;" text="etc">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="12.0" layoutY="170.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #E6E6FA;" text="Diet Assistant">
+            <Button layoutX="40.0" layoutY="188.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8;" text="Diet Assistant">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="40.0" layoutY="267.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8;" text="Log Out">
                <font>
                   <Font name="Arial Bold" size="16.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Label fx:id="Menu" layoutX="14.0" layoutY="64.0" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" text="     Menu">
-         <font>
-            <Font size="15.0" />
-         </font></Label>
-      <Label fx:id="MenuBack" layoutX="14.0" layoutY="64.0" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" text="     Menu">
+      <Label fx:id="MenuBack" layoutX="43.0" layoutY="14.0" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #45787d; -fx-background-radius: 20;" text="     Menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="searchText" layoutX="98.0" layoutY="64.0" prefHeight="38.0" prefWidth="238.0" promptText="⌕   Search     " style="-fx-background-radius: 15;">
+      <Label fx:id="Menu" layoutX="42.0" layoutY="14.0" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #45787d; -fx-background-radius: 20;" text="     Menu" textFill="WHITE">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Arial" size="15.0" />
          </font>
-      </TextField>
-      <Label fx:id="search" layoutX="344.0" layoutY="64.0" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-alignment: center;" text="Search">
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="-1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/back.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="-1.0" layoutY="15.0" mnemonicParsing="false" onAction="#backClick" prefHeight="26.0" prefWidth="30.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>
+
+-->
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="775.0" style="-fx-background-color: #dcfaf6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.firstpageController">
+   <children>
+      <Button layoutX="113.0" layoutY="156.0" mnemonicParsing="false" onAction="#onEastShopClicked" prefHeight="173.0" prefWidth="530.0" style="-fx-background-radius: 15; -fx-background-color: #4e8287;" text="East Shop" textAlignment="CENTER" textFill="#f3f8f8">
+         <font>
+            <Font name="Arial Bold" size="45.0" />
+         </font>
+      </Button>
+      <Button layoutX="113.0" layoutY="363.0" mnemonicParsing="false" onAction="#onWestShopClicked" prefHeight="174.0" prefWidth="530.0" style="-fx-background-radius: 15; -fx-background-color: #4e8287;" text="West Shop" textAlignment="CENTER" textFill="#f3f8f8">
+         <font>
+            <Font name="Arial Bold" size="45.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="slider" layoutX="-3.0" layoutY="67.0" opacity="0.9" prefHeight="523.0" prefWidth="171.0" style="-fx-background-color: #6b7070; -fx-background-radius: 10;">
+         <children>
+            <Button fx:id="myProfile" layoutX="12.0" layoutY="51.0" mnemonicParsing="false" onAction="#myProfileClick" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8;" text="My Profile">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="123.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8; -fx-alignment: center;" text="Previous Orders">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="432.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-radius: 12;" text="etc">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="203.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8;" text="Diet Assistant">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="myProfile1" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" onAction="#myProfileClick" prefHeight="48.0" prefWidth="148.0" style="-fx-background-radius: 12; -fx-background-color: #cffff8;" text="Log Out">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="MenuBack" layoutX="44.0" layoutY="23.0" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #4e8287; -fx-background-radius: 20;" text="     Menu" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="Menu" layoutX="43.0" layoutY="23.0" prefHeight="38.0" prefWidth="78.0" style="-fx-background-color: #4e8287; -fx-background-radius: 20;" text="     Menu" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
          </font>
       </Label>
    </children>

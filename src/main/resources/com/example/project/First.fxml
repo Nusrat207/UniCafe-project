@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="775.0" style="-fx-background-color: #dcfaf6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.firstpageController">
+    <children>
+      <ImageView fitHeight="91.0" fitWidth="283.0" layoutX="394.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/east5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="239.0" layoutX="409.0" layoutY="532.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/ewset.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="652.0" fitWidth="220.0" layoutY="7.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/siide.png" />
+         </image>
+      </ImageView>
+            <Button layoutX="14.0" layoutY="233.0" mnemonicParsing="false" onAction="#myProfileClick" prefHeight="46.0" prefWidth="196.0" style="-fx-background-color: transparent;" textFill="#150000" />
+            <Button layoutX="14.0" layoutY="296.0" mnemonicParsing="false" onAction="#orderHistory" prefHeight="54.0" prefWidth="196.0" style="-fx-background-color: transparent;" textFill="#8a8e8e" />
+            <Button layoutX="8.0" layoutY="547.0" mnemonicParsing="false" onAction="#logoutClick" prefHeight="62.0" prefWidth="203.0" style="-fx-background-color: transparent;" />
+          <Label fx:id="name_label" layoutX="459.0" layoutY="7.0" prefHeight="38.0" prefWidth="108.0" style="-fx-alignment: center;" text="Hello, User" textFill="#dcfaf6">
+              <font>
+                  <Font name="Arial Bold" size="14.0" />
+              </font>
+          </Label>
+          <Label fx:id="mealTime" layoutX="35.0" layoutY="130.0" prefHeight="38.0" prefWidth="154.0" style="-fx-alignment: center;" text=" It's Lunch Time now!" textFill="#766e6e">
+              <font>
+                  <Font name="Arial Bold" size="13.0" />
+              </font>
+          </Label>
+      <ImageView fitHeight="727.0" fitWidth="108.0" layoutX="211.0" layoutY="-19.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/sepp.png" />
+         </image>
+      </ImageView>
+        <Label layoutX="360.0" layoutY="336.0" prefHeight="27.0" prefWidth="339.0" text="Two Delicious Destinations Await! Browse~" textFill="#000000ac">
+            <font>
+                <Font name="Arial Bold Italic" size="16.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="269.0" fitWidth="463.0" layoutX="298.0" layoutY="45.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/bgx.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="175.0" layoutX="25.0" layoutY="371.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/expense.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="7.0" layoutY="363.0" mnemonicParsing="false" onAction="#expenseClick" prefHeight="54.0" prefWidth="203.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="411.0" layoutY="401.0" mnemonicParsing="false" onAction="#onEastShopClicked" prefHeight="83.0" prefWidth="230.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Button layoutX="420.0" layoutY="542.0" mnemonicParsing="false" onAction="#onWestShopClicked" prefHeight="78.0" prefWidth="220.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="23.0" />
+         </font></Button>
+    </children>
+</AnchorPane>

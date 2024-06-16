@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="775.0" style="-fx-background-color: #dcfaf6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Profile">
+    <children>
+        <Label layoutX="208.0" layoutY="262.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 60;" />
+      <AnchorPane prefHeight="706.0" prefWidth="333.0" style="-fx-background-color: #d8e8e6;">
+         <children>
+              <Label fx:id="name" layoutX="22.0" layoutY="337.0" prefHeight="31.0" prefWidth="288.0" style="-fx-alignment: center;" text="Nusrat Jahan Beg">
+                  <font>
+                      <Font name="Arial Bold" size="25.0" />
+                  </font>
+              </Label>
+            <ImageView fitHeight="210.0" fitWidth="271.0" layoutX="57.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/human.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="144.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/edit.png" />
+               </image>
+            </ImageView>
+              <ImageView fitHeight="31.0" fitWidth="27.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@img/backi.png" />
+                  </image>
+              </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="122.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/loc.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="name1" layoutX="140.0" layoutY="386.0" prefHeight="31.0" prefWidth="71.0" style="-fx-alignment: center;" text="IUT">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button layoutX="143.0" layoutY="513.0" mnemonicParsing="false" onAction="#onEditProfileClicked" prefHeight="46.0" prefWidth="46.0" style="-fx-background-color: transparent;" />
+              <Button mnemonicParsing="false" onAction="#backClick" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="stid1" alignment="CENTER" layoutX="422.0" layoutY="33.0" prefHeight="38.0" prefWidth="246.0" text="Personal Information">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="345.0" layoutY="103.0" prefHeight="142.0" prefWidth="416.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 12; -fx-border-width: 0.2;">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="116.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/id.png" />
+               </image>
+            </ImageView>
+              <Label fx:id="stid" layoutX="155.0" layoutY="14.0" prefHeight="38.0" prefWidth="126.0" text="Student ID">
+                  <font>
+                      <Font name="Arial Bold" size="21.0" />
+                  </font>
+              </Label>
+              <Label fx:id="id" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="14.0" layoutY="60.0" opacity="0.8" prefHeight="54.0" prefWidth="370.0" style="-fx-background-color: #ebfcfa; -fx-background-radius: 30; -fx-border-color: gray; -fx-border-radius: 30; -fx-border-width: 0.3;" text=" 210041207" textOverrun="CLIP">
+                  <font>
+                      <Font name="Arial" size="20.0" />
+                  </font>
+              </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="345.0" layoutY="294.0" prefHeight="142.0" prefWidth="416.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 12; -fx-border-width: 0.2;">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/call.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="number" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="14.0" layoutY="60.0" opacity="0.8" prefHeight="54.0" prefWidth="370.0" style="-fx-background-color: #ebfcfa; -fx-background-radius: 30; -fx-border-color: gray; -fx-border-radius: 30; -fx-border-width: 0.3;" text="01948360118" textOverrun="CLIP">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+              <Label fx:id="phone" layoutX="140.0" layoutY="14.0" prefHeight="37.0" prefWidth="165.0" text="Phone Number ">
+                  <font>
+                      <Font name="Arial Bold" size="21.0" />
+                  </font>
+              </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="345.0" layoutY="473.0" prefHeight="142.0" prefWidth="416.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 12; -fx-border-width: 0.2;">
+         <children>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="147.0" layoutY="17.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/maill.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="mail" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="14.0" layoutY="60.0" opacity="0.8" prefHeight="54.0" prefWidth="370.0" style="-fx-background-color: #ebfcfa; -fx-background-radius: 30; -fx-border-color: gray; -fx-border-radius: 30; -fx-border-width: 0.3;" text="nusratjahan21@iut-dhaka.edu" textOverrun="CLIP">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+              <Label fx:id="email" layoutX="189.0" layoutY="14.0" prefHeight="37.0" prefWidth="82.0" text="Email ">
+                  <font>
+                      <Font name="Arial Bold" size="21.0" />
+                  </font>
+              </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

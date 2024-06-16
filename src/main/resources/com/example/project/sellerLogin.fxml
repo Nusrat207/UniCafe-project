@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="775.0" style="-fx-background-color: #dcfaf6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.SellerLogin">
+    <children>
+        <Label layoutX="191.0" layoutY="73.0" text="Welcome to Seller Panel">
+            <font>
+                <Font name="Arial Bold Italic" size="34.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.019607843831181526" green="0.0117647061124444" blue="0.08627451211214066" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Label layoutX="280.0" layoutY="150.0" text="Enter your credentials to log in">
+            <font>
+                <Font name="Arial" size="16.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.3764705955982208" green="0.6431372761726379" blue="0.6705882549285889" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.019607843831181526" green="0.0117647061124444" blue="0.08627451211214066" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <TextField fx:id="sellerID" layoutX="195.0" layoutY="272.0" prefHeight="59.0" prefWidth="369.0" promptText="unique seller ID" style="-fx-background-radius: 20;">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+            <effect>
+                <InnerShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0">
+                    <color>
+                        <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+                    </color>
+                </InnerShadow>
+            </effect>
+        </TextField>
+        <Button fx:id="login" layoutX="329.0" layoutY="545.0" mnemonicParsing="false" onAction="#loginClick" style="-fx-background-color: #398f8f; -fx-background-radius: 20;" text="Log In" textFill="#f3f8f8">
+            <font>
+                <Font name="Arial Bold" size="27.0" />
+            </font>
+        </Button>
+        <Label fx:id="loginMsg" layoutX="247.0" layoutY="466.0" prefHeight="31.0" prefWidth="265.0" style="-fx-alignment: center;">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="pw" layoutX="195.0" layoutY="372.0" prefHeight="59.0" prefWidth="370.0" promptText="password" style="-fx-background-radius: 20;">
+            <font>
+                <Font name="Arial Bold" size="25.0" />
+            </font>
+            <effect>
+                <InnerShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0">
+                    <color>
+                        <Color red="0.3294117748737335" green="0.5764706134796143" blue="0.6000000238418579" />
+                    </color>
+                </InnerShadow>
+            </effect>
+        </PasswordField>
+        <ImageView fitHeight="39.0" fitWidth="51.0" layoutX="14.0" layoutY="652.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/stamp1.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/backk.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="4.0" layoutY="11.0" mnemonicParsing="false" onAction="#backClick" prefHeight="20.0" prefWidth="27.0" style="-fx-background-color: transparent;" />
+    </children>
+</AnchorPane>

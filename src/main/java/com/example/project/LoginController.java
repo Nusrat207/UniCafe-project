@@ -1,8 +1,10 @@
 package com.example.project;
 
+import com.example.project.model.food;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,10 +15,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -37,8 +42,10 @@ public class LoginController {
     private Label loginMsg;
     @FXML
     private AnchorPane rootPane;
+    @FXML
+    private Circle circleInside;
 
-    public void frontsigninClick(){
+    public void frontsigninClick() {
         try {
             Parent login = FXMLLoader.load(getClass().getResource("login_page.fxml"));
             rootPane.getChildren().setAll(login);
@@ -46,7 +53,8 @@ public class LoginController {
             ev.printStackTrace();
         }
     }
-    public void frontSignupClick(){
+
+    public void frontSignupClick() {
         try {
             Parent signup = FXMLLoader.load(getClass().getResource("signup.fxml"));
             rootPane.getChildren().setAll(signup);
@@ -56,33 +64,29 @@ public class LoginController {
     }
 
     @FXML
-    public void loginClick(ActionEvent e){
-        if(!idText.getText().isBlank() && !passwordText.getText().isBlank()){
+    public void loginClick(ActionEvent e) {
+        if (!idText.getText().isBlank() && !passwordText.getText().isBlank()) {
             validateLogin();
-        } else{
+        } else {
             loginMsg.setText("pls enter credentials");
         }
     }
-    public void validateLogin(){
+
+    public void validateLogin() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
         String verifyLogin = "select * from user_info where std_id = '" + idText.getText() + "'";
-        try{
-            Statement statement= connectDB.createStatement();
-            ResultSet queryRes= statement.executeQuery(verifyLogin);
+        try {
+            Statement statement = connectDB.createStatement();
+            ResultSet queryRes = statement.executeQuery(verifyLogin);
 
-            while(queryRes.next()){
+            while (queryRes.next()) {
                 String hashedPassword = queryRes.getString("password");
                 String enteredPassword = hashPassword(passwordText.getText());
 
                 if (hashedPassword.equals(enteredPassword)) {
-                    //loginMsg.setText("Congrats, login successful!");
-                    try {
-                        Parent login = FXMLLoader.load(getClass().getResource("firstpage.fxml"));
-                        rootPane.getChildren().setAll(login);
-                    } catch (IOException ev) {
-                        ev.printStackTrace();
-                    }
+
+
                     String name = queryRes.getString("name");
                     String mail = queryRes.getString("mail");
                     String phone = queryRes.getString("phone");
@@ -92,54 +96,74 @@ public class LoginController {
                     GlobalData.getInstance().setMail(mail);
                     GlobalData.getInstance().setPhone(phone);
 
+
+                    HelloApplication.Name=name;
+
+                    HelloApplication.std_id= Integer.parseInt(idText.getText());
+
+                    HelloApplication.CartItems.clear();
+                    String fetchCart= "select * from cart_info where std_id='" + HelloApplication.std_id + "';";
+                    try{
+                        Statement statement1 = connectDB.createStatement();
+                        ResultSet res = statement1.executeQuery(fetchCart);
+                        while(res.next()){
+                            food Food;
+                            Food = new food();
+                            Food.setName(res.getString("name"));
+                            Food.setPrice((int) Double.parseDouble(res.getString("price")));
+                            Food.setImgSrc(res.getString("image"));
+                            Food.setColor(res.getString("color"));
+                            Food.setShop(res.getString("shop"));
+                            Food.setMealType(res.getString("mealType"));
+                            Food.setServingSize(Integer.parseInt(res.getString("servingSize")));
+                            HelloApplication.CartItems.add(Food);
+                        }
+                    } catch(Exception e){
+                        e.getCause();
+                    }
+
+
+                    try {
+                        Parent login = FXMLLoader.load(getClass().getResource("First.fxml"));
+                        rootPane.getChildren().setAll(login);
+                    } catch (IOException ev) {
+                        ev.printStackTrace();
+                    }
+
                 } else {
-                     loginMsg.setText("Wrong credentials");
+                    loginMsg.setText("Wrong credentials");
                 }
             }
 
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
     }
-
-    public void signupClick(ActionEvent e){
-       /* try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signup.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage newStage = new Stage();
-            Scene scene = new Scene(root, 422, 706);
-            newStage.setTitle("Hello!");
-            newStage.setScene(scene);
-            Stage initialStage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-            initialStage.close();
-            newStage.show();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } */
-        try {
-            Parent signup = FXMLLoader.load(getClass().getResource("signup.fxml"));
-            rootPane.getChildren().setAll(signup);
-        } catch (IOException ev) {
-            ev.printStackTrace();
-        }
-    }
-
-
-    /*
     @FXML
-    public void cancelClick(ActionEvent e){
-        Stage stage = (Stage) CancelButton.getScene().getWindow();
-        stage.close();
+    void backClick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("front.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 775, 706);
+        Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
-    public void initialize(URL url, ResourceBundle resourceBundle){
-        File brandingFile = new File("@c21cdd2b452985be6147fa9d8142252b.jpg" );
-        Image brandImg=new Image(brandingFile.toURI().toString());
-        brandimgV.setImage(brandImg);
 
-        File lockFile = new File("@istockphoto-936681148-612x612.jpg" );
-        Image lockImg=new Image(lockFile.toURI().toString());
-        lockimgV.setImage(lockImg);
-    } */
+    @FXML
+    void sellerLogin(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sellerLogin.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 775, 706);
+        Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void signupClick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signup.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 775, 706);
+        Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 }
-//dekhte paina
